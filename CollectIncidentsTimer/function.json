@@ -1,0 +1,20 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "name": "myTimer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "0 */1 * * * *"
+    },
+    {
+      "name": "incident",
+      "type": "cosmosDB",
+      "databaseName": "brwim",
+      "collectionName": "incidents",
+      "createIfNotExists": true,
+      "connectionStringSetting": "BRWIM_COSMOSDB",     
+      "direction": "out"
+    }
+  ]
+}
